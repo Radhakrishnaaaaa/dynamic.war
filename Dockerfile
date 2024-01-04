@@ -1,4 +1,5 @@
-FROM tomcat as tomcat
-COPY target/01-maven-web-app.war /usr/local/tomcat/webapps/
+FROM tomee
+MAINTAINER "RADHAKRISHNA"
+COPY **/*.war /usr/local/tomee/webapps
+RUN ["catalina.sh","run"]
 EXPOSE 8080
-CMD ["catalina.sh","run"]
