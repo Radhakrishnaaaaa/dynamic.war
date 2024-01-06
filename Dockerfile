@@ -1,4 +1,4 @@
-FROM tomcat:8-alipine
+FROM tomcat
 MAINTAINER "RADHAKRISHNA"
 COPY **/*.war /usr/local/tomcat/webapps
 RUN ["catalina.sh","run"]
